@@ -1,0 +1,53 @@
+/* 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+    --white: #fff;
+    --black: #221f1f;
+    --lightpurple: #9e91f2;
+    --darkgray: #1e1f26;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  section {
+    height: 100vh;
+  }
+
+  section:nth-child(1) {
+    background-color: rgb(245, 255, 190);
+  }
+
+  section:nth-child(2) {
+    background-color: rgb(209, 255, 240);
+  }
+
+  section:nth-child(3) {
+    background-color: rgb(255, 210, 210);
+  }
+
+  
+  /* MAIN CSS (This is the code necessary to get the menu effect)
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  
+  .trigger-menu-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    z-index: 2;
+    background: var(--lightpurple);
+    transition: transform 0.4s;
+  }
+  
+  .scroll-down .trigger-menu-wrapper {
+    transform: translate3d(0, -100%, 0);
+  }
+  
+  .scroll-up .trigger-menu-wrapper {
+    transform: none;
+  }
